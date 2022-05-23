@@ -64,12 +64,12 @@ namespace MarcoTMP.Derby
         {
             Debug.Log("Ball was hit!");
             // if bat and ball are in the close range
-            if (ball.IsInHitZone)
+            if (ball.IsInHitZone || true)
             {
                 // deactivate batter
                 batter.Deactivate();
                 //view.SetFlyView();
-                ball.MoveBy(Vector3.one);
+                ball.HitBall(Vector3.one * 2);
 
                 // maybe the interface should be:
                 // velocity comes from batter homerun average
